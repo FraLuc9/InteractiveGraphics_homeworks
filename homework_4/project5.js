@@ -103,7 +103,7 @@ class MeshDrawer
 		gl.useProgram(this.program);
 		gl.uniformMatrix4fv(this.mv, false, matrixMV);
 		gl.uniformMatrix4fv(this.mvp, false, matrixMVP);
-		gl.uniformMatrix4fv(this.normal, false, matrixNormal);
+		gl.uniformMatrix3fv(this.normal, false, matrixNormal);
 
 		gl.bindBuffer(gl.ARRAY_BUFFER, this.vertexBuffer);
 		gl.vertexAttribPointer(this.posLocation, 3, gl.FLOAT, false, 0, 0);
@@ -114,7 +114,7 @@ class MeshDrawer
 		gl.enableVertexAttribArray(this.texLocation);
 
 		gl.bindBuffer(gl.ARRAY_BUFFER, this.normalBuffer);
-		gl.vertexAttribPointer(this.normLocation, 2, gl.FLOAT, false, 0, 0);
+		gl.vertexAttribPointer(this.normLocation, 3, gl.FLOAT, false, 0, 0);
 		gl.enableVertexAttribArray(this.normLocation);
 
 		gl.drawArrays( gl.TRIANGLES, 0, this.numTriangles );
