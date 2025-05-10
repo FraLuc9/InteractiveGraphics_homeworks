@@ -140,6 +140,7 @@ class MeshDrawer
 		gl.activeTexture(gl.TEXTURE0);
 
 		gl.uniform1i(this.sampler, 0);
+		this.showTexture(true);
 	}
 	
 	// This method is called when the user changes the state of the
