@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Biliardinio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "./libs/three.js"
+      }
+    }
+  </script>
+  <div id="powerGauge">
+    <div id="powerBar"></div>
+  </div>
+
+  <button id="shootButton" class="arcade-button">SHOOT</button>
+
+  <div id="gameStateDisplay"
+     style="
+       position: absolute;
+       top: 40px;
+       left: 40px;
+       font-size: 32px;
+       font-weight: bold;
+       color: white;
+       z-index: 10;
+       pointer-events: none;
+       font-family: sans-serif;
+       text-shadow:
+       -1px -1px 0 #000,
+       1px -1px 0 #000,
+       -1px  1px 0 #000,
+       1px  1px 0 #000;
+     ">
+  </div>
+
+  
+  <button id="resetButton">Reset Game</button>
+  
+  <div id="scoreDisplay"
+     style="
+       position: absolute;
+       top: 40px;
+       right: 600px;
+       font-size: 32px;
+       font-weight: bold;
+       color: white;
+       z-index: 10;
+       pointer-events: none;
+       font-family: sans-serif;
+       text-shadow:
+       -1px -1px 0 #000,
+       1px -1px 0 #000,
+       -1px  1px 0 #000,
+       1px  1px 0 #000;
+     ">
+  </div>
+  <button id="topDownView" style="position: absolute; bottom: 20px; left: 20px; z-index: 10;">Top View</button>
+  <button id="sideView" style="position: absolute; bottom: 20px; left: 140px; z-index: 10;">Side View</button>
+  <button id="cueView" style="position: absolute; bottom: 20px; left: 260px; z-index: 10;">Cue Ball View</button>
+  <div id="scoreNotice" 
+     style="
+      position: absolute;
+      top: 80px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 40px; 
+      font-weight: bold;
+      color: white; 
+      text-align: center; 
+      z-index: 10;
+      pointer-events: none;
+      font-family: sans-serif;
+      text-shadow:
+       -1px -1px 0 #000,
+       1px -1px 0 #000,
+       -1px  1px 0 #000,
+       1px  1px 0 #000;">
+  </div>
+
+
+  <div id="turnIndicator"
+     style="
+       position: absolute;
+       top: 40px;
+       right: 40px;
+       font-size: 32px;
+       font-weight: bold;
+       color: white;
+       z-index: 10;
+       pointer-events: none;
+       font-family: sans-serif;
+       text-shadow:
+       -1px -1px 0 #000,
+       1px -1px 0 #000,
+       -1px  1px 0 #000,
+       1px  1px 0 #000;
+     ">
+  </div>
+  <canvas id="billiardCanvas"
+    style="
+       position: absolute;
+    ">
+  </canvas>
+  <script type="module" src="main.js"></script>
+</body>
+</html>
